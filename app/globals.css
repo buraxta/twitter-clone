@@ -16,12 +16,17 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .logoContainer {
+    @apply flex space-x-3 items-center text-black cursor-pointer ml-5 hoverEffect;
+  }
+  .siteText {
+    @apply text-xl text-black hidden md:inline-flex;
+  }
+  .logo {
+    @apply group-hover:scale-110 transition-transform duration-200 ease-out h-10 w-7;
+  }
+  .hoverEffect {
+    @apply hover:bg-gray-200 rounded-full p-2 cursor-pointer;
+  }
 }
