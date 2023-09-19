@@ -7,9 +7,9 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import { FaRegCommentDots } from "react-icons/fa";
 import { IoStatsChartOutline } from "react-icons/io5";
 import { FaRetweet } from "react-icons/fa";
-const Posts = () => {
+const Posts = ({ imgUrl, text }) => {
   return (
-    <div className="p-2 flex space-x-3 border-b border-gray-200 ">
+    <div className="p-2 flex space-x-3 border-b border-gray-200 dark:border-gray-700">
       <div>
         <Image
           className="rounded-full h-12 w-12 min-w-[50px]"
@@ -39,12 +39,10 @@ const Posts = () => {
           </div>
         </div>
         <div>
-          <p className="my-2">I love this photo much!</p>
+          <p className="my-2">{text}</p>
           <Image
             className="w-full h-96 object-cover rounded-2xl mr-2"
-            src={
-              "https://images.unsplash.com/photo-1694807865565-70252084fa27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80"
-            }
+            src={imgUrl}
             width={500}
             height={500}
             alt={"post"}

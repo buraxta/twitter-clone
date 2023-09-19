@@ -18,21 +18,21 @@
 
 @layer components {
   .logoContainer {
-    @apply flex space-x-3 items-center text-black cursor-pointer 
+    @apply flex space-x-3 items-center text-black dark:text-white cursor-pointer 
     ml-5 hoverEffect w-12 sm:w-auto;
   }
   .siteText {
-    @apply text-xl text-black hidden lg:inline-flex;
+    @apply text-xl text-black dark:text-white hidden lg:inline-flex;
   }
   .logo {
     @apply group-hover:scale-110 transition-transform duration-200 
     ease-out h-10 w-7;
   }
   .icons {
-    @apply text-xl text-gray-600 cursor-pointer hover:scale-110
+    @apply text-xl text-gray-600 dark:text-white cursor-pointer hover:scale-110
     transition-all duration-150 ease-out;
   }
   .hoverEffect {
-    @apply hover:bg-gray-200 rounded-full p-2 cursor-pointer;
+    @apply hover:bg-gray-200 dark:hover:bg-slate-800 rounded-full p-2 cursor-pointer;
   }
 }
