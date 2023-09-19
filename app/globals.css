@@ -22,11 +22,15 @@
     ml-5 hoverEffect w-12 sm:w-auto;
   }
   .siteText {
-    @apply text-xl text-black hidden md:inline-flex;
+    @apply text-xl text-black hidden lg:inline-flex;
   }
   .logo {
     @apply group-hover:scale-110 transition-transform duration-200 
     ease-out h-10 w-7;
+  }
+  .icons {
+    @apply text-xl text-gray-600 cursor-pointer hover:scale-110
+    transition-all duration-150 ease-out;
   }
   .hoverEffect {
     @apply hover:bg-gray-200 rounded-full p-2 cursor-pointer;

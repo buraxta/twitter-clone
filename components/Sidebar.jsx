@@ -14,7 +14,10 @@ import MiniProfile from "./MiniProfile";
 
 const Sidebar = () => {
   return (
-    <div className="min-h-full relative">
+    <div
+      className="min-h-screen fixed bg-white
+    lg:ml-[100px]"
+    >
       <BsTwitter className=" ml-10 text-3xl text-blue-500 hover:bg-blue-100 hover:rounded-3xl h-12 w-10 cursor-pointer p-1" />
       <div className="flex flex-col  mx-auto  max-w-[250px]">
         <div className="logoContainer group">

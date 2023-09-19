@@ -3,6 +3,7 @@ import React from "react";
 import { BiWinkSmile } from "react-icons/bi";
 import { BsCardImage } from "react-icons/bs";
 import { IoSparklesSharp } from "react-icons/io5";
+import Posts from "./Posts";
 
 const Feed = () => {
   return (
@@ -50,6 +51,11 @@ const Feed = () => {
             Tweet
           </button>
         </div>
+      </div>
+      <div>
+        <Posts />
+        <Posts />
+        <Posts />
       </div>
     </div>
   );
