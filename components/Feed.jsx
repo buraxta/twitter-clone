@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { BiWinkSmile } from "react-icons/bi";
 import { BsCardImage } from "react-icons/bs";
-import { IoSparklesSharp } from "react-icons/io5";
 import Posts from "./Posts";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 const Feed = () => {
   return (
@@ -14,7 +14,7 @@ const Feed = () => {
       >
         <h2 className="font-bold sm:text-xl text-lg cursor-pointer">Home</h2>
         <span className="hoverEffect">
-          <IoSparklesSharp />
+          <DarkModeSwitch />
         </span>
       </div>
       <div className="my-5 border-b-2 border-gray-200 dark:border-gray-700 ">
