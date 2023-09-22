@@ -12,11 +12,20 @@ export default async function Home() {
       throw new Error("Failed to fetch data");
     }
     const data = await res.json();
-    return data;
+
+    // who to follow section
+    const randomUsersResults = await fetch(
+      "https://randomuser.me/api/?results=30&inc=name,login,picture"
+    );
+    const randomUsersData = await randomUsersResults.json();
+
+    return {
+      data: data,
+      randomUsersData: randomUsersData,
+    };
   }
 
   const newsResults = await getData();
-  console.log("results", newsResults.status);
 
   return (
     <main
@@ -31,7 +40,10 @@ export default async function Home() {
       >
         <Feed />
       </div>
-      <Widgets newsResults={newsResults.articles} />
+      <Widgets
+        newsResults={newsResults.data.articles}
+        randomUsersResults={newsResults.randomUsersData.results}
+      />
     </main>
   );
 }
